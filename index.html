@@ -11,66 +11,126 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <!-- NAVIGATION -->
+  <nav id="navbar" class="nav">
+    <ul class="nav-list">
+      <li class="navbar-item">
+        <span class="name">Sadiq Hussain</span>
+      </li>
+      <li class="navbar-item">
+        <div class="theme-dropdown">
+          <button class="theme-btn">Themes</button>
+          <div class="theme-dropdown-content">
+            <a href="#" data-theme="dark">Dark Mode with Accents</a>
+            <a href="#" data-theme="blue">Professional Blues</a>
+            <a href="#" data-theme="neutral">Sophisticated Neutrals</a>
+            <a href="#" data-theme="monochrome">Modern Monochrome</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="#home" class="tab-link" data-tab="home">Home</a></li>
+      <li><a href="#about" class="tab-link" data-tab="about">About</a></li>
+      <li><a href="#work" class="tab-link" data-tab="work">Work</a></li>
+      <li><a href="#blogs" class="tab-link" data-tab="blogs">Blogs</a></li>
+      <li><a href="#contact" class="tab-link" data-tab="contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<!-- START NAVIGATION SECTION -->
-<nav id="navbar" class="nav">
-  <ul class="nav-list">
-    <li class="navbar-item"><span class="name">Sadiq Hussain</span></li>
-    <li><a href="#welcome-section">About</a></li>
-    <li><a href="#projects">Work</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-<!-- END NAVIGATION SECTION -->
-
-<!-- START WELCOME SECTION -->
-<section id="welcome-section" class="welcome-section">
-  <h1>Hey, I'm Sadiq</h1>
-  <p>As a web developer, I create user-friendly interfaces for complex algorithms.</p>
-</section>
-<!-- END WELCOME SECTION -->
-
-<!-- START PROJECTS SECTION -->
-<section id="projects" class="projects-section">
-  <div class="projects-section-header">
-    <h2>Professional Experience</h2>
-  </div>
+<!-- HOME -->
+  <section id="home" class="tab-content active">
+    <div class="home-section">
+      <h1>Hey, I'm Sadiq</h1>
+      <p>As a web developer, I create user-friendly interfaces for complex algorithms.</p>
+    </div>
+  </section>
   
-  <div class="work-experience">
-    <div class="experience-item">
-      <h3>CISCO - Bangalore, Karnataka</h3>
-      <p class="position">Software Consulting Engineer | Dec'22 - Dec'23</p>
-      <ul class="job-details">
-        <li>I underwent a year-long apprenticeship, during which I participated in Learning & Development training sessions as well as multiple Cisco software product training programs.</li>
-        <li><strong>LOE (Level of Efforts) Calculator:</strong> Contributed to the development of an internal tool during the Cisco Apprenticeship Program. Worked on both front end and back-end programming to enable customers to easily choose use cases, estimate time and workforce for their desired product, and assess urgency. Technologies Used: MERN, Docker, MongoDB, FIGMA.</li>
-        <li><strong>Automated Newsletter:</strong> Contributed to the development of an automated newsletter system for the department with the team. Implemented a user-friendly platform allowing employees to submit articles via websites or Webex bot. Incorporated various text formatting options, including paraphrasing, to enhance articulation. Technologies Used: MEAN, MongoDB, AdobeXD.</li>
-      </ul>
+
+<!-- ABOUT -->
+<section id="about" class="tab-content">
+  <div class="about-section">
+  <div class="about-section-header">
+    <h2>About Me</h2>
+  </div>
+    <p>
+      - Hello! I'm Sadiq Hussain, a passionate web developer with a knack for creating intuitive and engaging user interfaces. With a strong foundation in both front-end and back-end development, I thrive on turning complex problems into simple, beautiful, and functional designs. My journey in the tech world began with a fascination for coding and has evolved into a dedicated career, marked by continuous learning and growth.
+    </p>
+    <br>
+    <p>
+      - I recently completed a one-year apprenticeship at CISCO, where I honed my skills in full-stack development, working with technologies such as MERN, Docker, and MongoDB. During this time, I contributed to several impactful projects, including the development of an LOE Calculator and an Automated Newsletter system, which streamlined processes and enhanced productivity within the organization.
+    </p>
+    <br>
+    <p>
+      - My technical expertise is complemented by my ability to collaborate effectively with cross-functional teams, ensuring that project goals are met with precision and creativity. I am committed to delivering high-quality solutions that not only meet but exceed client expectations.
+    </p>
+    <br>
+    <p>
+      - Beyond the technical realm, I am an advocate for user-centered design and accessibility, striving to make the web a more inclusive space for everyone. My approach is always user-first, ensuring that every interface I create is not only aesthetically pleasing but also highly functional and accessible to all users.
+    </p>
+    <br>
+    <p>
+      - When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or enjoying a good book. Let's connect and create something amazing together!
+    </p>
+  </div>
+</section>
+
+
+<!-- WORK -->
+<section id="work" class="tab-content">
+  <div class="work-section">
+    <div class="work-section-header">
+      <h2>Professional Experience</h2>
+    </div>
+    <div class="work-experience">
+      <div class="experience-item">
+        <h3><span class="company-heading">
+          <img src="assets/cisco_icon.jpeg" alt="CISCO Logo" class="company-logo">
+          CISCO - Bangalore, Karnataka
+        </span>
+        </h3>
+        <p class="position">Software Consulting Engineer | Dec'22 - Dec'23</p>
+        <ul class="job-details">
+          <li><strong>LOE (Level of Efforts) Calculator:</strong> Led the development of the LOE (Level of Efforts) Calculator using the MERN stack. Managed the end-to-end system implementation, detailed the SRS, FRS, and TRS to ensure functionality and technical alignment. Designed the user interface in Figma and utilized Docker for deployment. This tool helps customers estimate time, workforce, and other parameters for CISCO products and use cases based on urgency.</li>
+          <li><strong>Automated Newsletter:</strong> Led the development of an automated newsletter system with the MERN stack and Figma for UI/UX design. Managed the project by detailing the SRS, FRS, and TRS to enable seamless article submissions via websites or Webex bots. The system enhances article clarity through advanced text formatting options, including paraphrasing.</li>
+          <li><strong>Web Applications Development:</strong> Managed and developed web applications from inception to deployment, including requirement gathering, detailed UI/UX design, and robust development using modern web technologies. Executed seamless data migration, conducted comprehensive testing (unit, integration, system, UAT), and ensured smooth go-live with meticulous rollout plans. Provided go-live Hypercare support, monitoring performance, resolving issues, and implementing optimizations for sustained success.</li>
+          <li><strong>Project Presentation:</strong> Presented the project to the MIS, Director, and Senior Manager, demonstrating its features and benefits, and received positive feedback.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
-<!-- END PROJECTS SECTION -->
 
-<!-- START CONTACT SECTION -->
-<section id="contact" class="contact-section">
-  <div class="contact-section-header">
-    <h2>Let's work together...</h2>
-    <p>How do you take your coffee?</p>
+<!-- BLOGS -->
+<section id="blogs" class="tab-content">
+  <div class="blogs-section">
+  <div class="blogs-section-header">
+    <!-- <h2>Blogs</h2> -->
   </div>
-  <div class="contact-details-container">
-    <a id="profile-link" href="https://github.com/sadiqhussain13" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
-    <a href="mailto:sadiqhussain13@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Mail</a>
-    <a href="https://www.linkedin.com/in/sadiq-hussain-ba948916b/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> LinkedIn</a>
-</div>
-
+    <p>Coming soon!</p>
+  </div>
 </section>
-<!-- END CONTACT SECTION -->
 
-<!-- START FOOTER SECTION -->
+<!-- CONTACT -->
+<section id="contact" class="tab-content">
+  <div class="contact-section">
+    <div class="contact-section-header">
+      <h2>Let's work together...</h2>
+      <p>How do you take your coffee?</p>
+    </div>
+    <div class="contact-details-container">
+      <a id="profile-link" href="https://github.com/sadiqhussain13" target="_blank" class="btn contact-details"><i class="fab fa-github"></i> GitHub</a>
+      <a href="mailto:sadiqhussain13@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Mail</a>
+      <a href="https://www.linkedin.com/in/sadiq-hussain-ba948916b/" target="_blank" class="btn contact-details"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
   <p>Thank you for visiting!</p>
   <p>&copy; 2024 Sadiq Hussain</p>
 </footer>
-<!-- END FOOTER SECTION -->
 
+<script src="index.js"></script>
 </body>
 </html>
+
