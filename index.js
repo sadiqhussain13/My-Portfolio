@@ -16,22 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme('dark');
     }
 
-    // Handle tab switching
-    tabs.forEach(tab => {
-        tab.addEventListener('click', event => {
-            event.preventDefault();
-
-            const targetTab = event.target.dataset.tab;
-
-            tabContents.forEach(content => content.classList.remove('active'));
-            document.getElementById(targetTab).classList.add('active');
-
-            tabs.forEach(tab => tab.classList.remove('active-tab'));
-            event.target.classList.add('active-tab');
-        });
-    });
-
-    // Toggle theme dropdown visibility
+    // Handle theme dropdown
     themeBtn.addEventListener('click', () => {
         themeDropdown.classList.toggle('show');
     });
@@ -44,6 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
             applyTheme(theme);
             themeDropdown.classList.remove('show');
             localStorage.setItem('theme', theme);
+
+            // Track theme change event in Google Analytics
+            gtag('event', 'theme_change', {
+                'event_category': 'Theme',
+                'event_label': theme
+            });
         });
     });
 
@@ -53,6 +44,34 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.add('sticky');
         } else {
             navbar.classList.remove('sticky');
+        }
+    });
+
+    // Define routes
+    function showTab(targetTab) {
+        tabContents.forEach(content => content.classList.remove('active'));
+        document.getElementById(targetTab).classList.add('active');
+
+        tabs.forEach(tab => tab.classList.remove('active-tab'));
+        document.querySelector(`.tab-link[data-tab="${targetTab}"]`).classList.add('active-tab');
+    }
+
+    page('/', () => showTab('home'));
+    page('/home', () => showTab('home'));
+    page('/about', () => showTab('about'));
+    page('/work', () => showTab('work'));
+    page('/blogs', () => showTab('blogs'));
+    page('/contact', () => showTab('contact'));
+
+    page();
+
+    // Handle initial state
+    const initialPath = window.location.pathname.split('/').filter(segment => segment !== '')[0];
+    const initialTab = initialPath || 'home';
+    document.getElementById(initialTab).classList.add('active');
+    tabs.forEach(tab => {
+        if (tab.dataset.tab === initialTab) {
+            tab.classList.add('active-tab');
         }
     });
 });
@@ -85,8 +104,3 @@ function getThemeValue(varName) {
         return null;
     }
 }
-
-
-
-
-  

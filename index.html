@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sadiq's Portfolio</title>
+  <base href="https://sadiqportfolio.pages.dev/">
   <link rel="icon" type="image/x-icon" href="assets/SADIQ.ico">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet">
@@ -40,11 +41,11 @@
           </div>
         </div>
       </li>
-      <li class="navbar-item"><a href="home" class="tab-link" data-tab="home">Home</a></li>
-      <li class="navbar-item"><a href="about" class="tab-link" data-tab="about">About</a></li>
-      <li class="navbar-item"><a href="work" class="tab-link" data-tab="work">Work</a></li>
-      <li class="navbar-item"><a href="blogs" class="tab-link" data-tab="blogs">Blogs</a></li>
-      <li class="navbar-item"><a href="contact" class="tab-link" data-tab="contact">Contact</a></li>
+      <li class="navbar-item"><a href="/home" class="tab-link" data-tab="home">Home</a></li>
+      <li class="navbar-item"><a href="/about" class="tab-link" data-tab="about">About</a></li>
+      <li class="navbar-item"><a href="/work" class="tab-link" data-tab="work">Work</a></li>
+      <li class="navbar-item"><a href="/blogs" class="tab-link" data-tab="blogs">Blogs</a></li>
+      <li class="navbar-item"><a href="/contact" class="tab-link" data-tab="contact">Contact</a></li>
     </ul>
   </nav>
 </div>
@@ -140,9 +141,14 @@
 <!-- FOOTER -->
 <footer>
   <p>Thank you for visiting!</p>
-  <p>&copy; 2024 Sadiq Hussain</p>
+  <p>&copy; <span id="currentYear"></span> Sadiq Hussain</p>
 </footer>
-
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('currentYear').innerHTML = new Date().getFullYear();
+  });
+</script>
+<script src="https://unpkg.com/page/page.js"></script>
 <script src="index.js"></script>
 </body>
 </html>
