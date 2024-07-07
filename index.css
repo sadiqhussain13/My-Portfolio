@@ -276,7 +276,7 @@ img {
 
 .about-section-header {
   text-align: center;
-  margin-top: -7rem;
+  margin-top: -5rem;
 }
 
 @media (max-width: 61.25em) {
@@ -305,7 +305,7 @@ img {
 
 .work-section-header {
   max-width: 64rem;
-  margin-top: -7rem;
+  margin-top: -5rem;
 }
 
 .work {
